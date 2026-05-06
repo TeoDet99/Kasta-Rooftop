@@ -1,0 +1,559 @@
+    #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616; /* Πολύ σκούρο, σχεδόν μαύρο */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 2.5s ease, visibility 3s;
+}
+
+#loader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.mini-logo {
+    width: 250px; /* Μικρό εικονίδιο */
+    margin-bottom: 30px;
+}
+
+.loader-title {
+    font-family: 'Caudex', serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.loader-divider {
+    width: 60px;
+    height: 1px;
+    background-color: #c5a47e;
+    margin: 20px auto;
+}
+
+.loader-subtitle {
+    font-family: 'Caudex', serif;
+    font-size: 0.85rem;
+    color: #c5a47e;
+    letter-spacing: 4px; /* Αραιά γράμματα για στυλ */
+    text-transform: uppercase;
+}
+       body {
+    position: relative; /* Απαραίτητο για να μπει η εικόνα από πίσω */
+    margin: 0;
+    background-color: #353C35; /* Το σταθερό λαδί χρώμα σου */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px; 
+    
+    /* Η ΦΩΤΟΓΡΑΦΙΑ ΚΑΙ ΤΟ FADE */
+    background: 
+        /* Το gradient κάνει fade από ημιδιάφανο λαδί σε πλήρες λαδί στο κάτω μέρος */
+        linear-gradient(to bottom, 
+            rgba(53, 60, 53, 0.2) 0%, 
+            rgba(53, 60, 53, 0.6) 70%, 
+            rgba(53, 60, 53, 1) 100%
+        ),
+        url('ROOFTOP 1.png'); /* Το όνομα της εικόνας σου */
+        
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Την στέλνει πίσω από το κείμενο και τα εικονίδια */
+}
+
+        /* 1. Logo Section */
+.logo-container {
+    background-color: rgb(255, 255, 255); /* Μαύρο background για να δένει με το logo */
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    overflow: hidden; /* Διασφαλίζει ότι η εικόνα ακολουθεί τις στρογγυλεμένες γωνίες */
+}
+.logo-container img {
+    width: 100%; /* Η εικόνα γεμίζει όλο το πλάτος */
+    height: 100%; /* Η εικόνα γεμίζει όλο το ύψος */
+    object-fit: cover; /* Καλύπτει το πλαίσιο χωρίς να παραμορφώνεται */
+}
+
+
+.welcome-section {
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+    color: #fff;
+}
+
+.welcome-section h1 {
+    font-family: 'Caudex', serif; /* Ή όποια γραμματοσειρά χρησιμοποιείς */
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #F1E3C8; /* Ένα απαλό χρυσό που ταιριάζει με το λογότυπο */
+}
+
+.welcome-section p {
+    font-size: 1rem;
+    color: #888;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background-color: #c5a47e;
+    margin: 20px auto;
+}
+
+        /* 2. Info Bar (Ώρα/Γλώσσα) */
+        .info-bar {
+            display: flex;
+            gap: 15px;
+            margin-top: 1px;
+            margin-right: px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 8px 18px;
+            border-radius: 50px;
+            border: 1px solid rgba(201, 167, 127, 0.3);
+            font-size: 0.85rem;
+            backdrop-filter: blur(5px);
+            color: #efe0cf;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 3. Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .social-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #736a5f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem; /* Μεγαλώνουμε λίγο το εικονίδιο */
+    text-decoration: none;
+    color: var(--bg-olive);/* Το χρώμα του εικονιδίου */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+        /* Εφέ για όταν τα πατάει ο χρήστης */
+        .social-circle:active {
+            transform: scale(0.9); /* Μικραίνει ελαφρώς στο πάτημα */
+            filter: brightness(1.2); /* Φωτίζει λίγο */
+        }
+
+        .social-icons:devider {
+            width: 0px; /* Πιο μικρό */
+            opacity: 1; /* Πιο διακριτικό */
+            
+        }
+
+        /* 4. Προτροπή "Ξεκινήστε επιλέγοντας έναν κατάλογο, για να δείτε τα προϊόντα & τις υπηρεσίες του."*/ 
+        .instruction-box {
+            margin: 35px 0 20px 0; ;
+            width: 100%;
+            max-width: 335px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(201, 167, 127, 0.3);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            color: #efe0cf;
+        }
+
+        /* 5. Menu Grid (Οι κατηγορίες από πριν) */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Η κάθε κάρτα ξεχωριστά */
+        .menu-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none; /* Βγάζει την υπογράμμιση από τα links */
+            aspect-ratio: 1 / 1; /* Κάνει τις κάρτες τέλεια τετράγωνα */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Απαλή σκιά */
+}   
+        .menu-item {
+    position: relative; /* Απαραίτητο για να μπει ο τίτλος από πάνω */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(201, 167, 127, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    text-decoration: none;
+    background: #1a1a1a;
+    transition: transform 0.3s ease;
+}
+
+        .menu-item:active {
+            transform: scale(0.95);
+        }
+
+       /* Η εικόνα */
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* Λίγο πιο σκούρα για να φαίνεται το κείμενο */
+    transition: transform 0.3s ease;
+}
+
+        /* Hover εφέ */
+.menu-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+        /* Ο Τίτλος (Cocktails, Food κλπ) */
+.menu-item h3 {
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Caudex', serif;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Σκιά για να διαβάζεται */
+}
+        #clock {
+            font-weight: 600;
+        }
+        
+        .main-footer {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Λίγο πιο σκούρο από το λαδί για διαχωρισμό */
+            padding: 30px 20px;
+            margin-top: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(201, 167, 127, 0.2); /* Λεπτή χρυσή γραμμή */
+}
+
+.footer-content p {
+    color: var(--gold-text);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.footer-content .location {
+    opacity: 0.8;
+}
+
+.developer-credit {
+    margin-top: 15px;
+    font-size: 0.7rem;
+    color: white;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+/* 1. ΒΑΣΙΚΟΙ ΚΑΝΟΝΕΣ ΠΟΥ ΛΥΝΟΥΝ ΤΟ ΠΡΟΒΛΗΜΑ ΤΟΥ ΠΛΑΤΟΥΣ */
+* {
+    box-sizing: border-box; /* ΑΥΤΟ κρατάει τις τιμές μέσα στην οθόνη */
+}
+
+:root {
+    --bg-dark: #353C35;
+    --gold: #C9A77F;
+    --text-gray: #b0b0b0;
+    --tag-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Απαγορεύει στη σελίδα να πάει δεξιά-αριστερά */
+}
+
+/* 2. HEADER & LOGO SECTION */
+.top-section {
+    position: relative;
+    width: 100%;
+    padding-bottom: 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: 
+        linear-gradient(rgba(53, 60, 53, 0.4), rgba(53, 60, 53, 1)), 
+        url('images/ROOFTOP1.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: var(--bg-dark);
+    padding: 15px;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.logo-icon {
+    width: 32px;
+    height: auto;
+    filter: var(--gold);
+}
+
+.logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.brand-title {
+    font-family: 'Fraunces 120 Light', serif;
+    font-size: 1.15rem;
+    color: #F1E3C8;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+    font-family: 'Fraunces 120 Light', serif;
+    font-size: 1rem; /* Διορθώθηκε το κενό */
+    color: #F1E3C8;
+    font-style: italic;
+    margin-top: -3px;
+}
+
+/* 3. STICKY NAVIGATION BAR */
+/* Το γενικό περίβλημα του μενού */
+.nav-bar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-dark);
+    z-index: 1001;
+    width: 100%;
+    display: flex; /* Βοηθάει να βάλουμε τα βελάκια και το μενού στην ίδια ευθεία */
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05); /* Μια ωραία λεπτή γραμμή από κάτω (προαιρετικό) */
+}
+
+/* Το μενού που σκρολάρει */
+.nav-scroll {
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* ΑΥΤΟ ΛΥΝΕΙ ΤΟ ΠΡΟΒΛΗΜΑ - Ξεκινάει πάντα από αριστερά */
+    overflow-x: auto;
+    gap: 25px;
+    padding: 15px 20px; /* Αφήνει κενό στις άκρες για να μην κολλάνε τα γράμματα στο κινητό */
+    scrollbar-width: none;
+    scroll-behavior: smooth; /* Κάνει το σκρολ με τα βελάκια πιο απαλό */
+    flex: 1; /* Πιάνει όλο τον διαθέσιμο χώρο ανάμεσα στα βελάκια */
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Η εμφάνιση για τα βελάκια */
+.scroll-btn {
+    background-color: var(--bg-dark);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0 15px;
+    height: 100%;
+    cursor: pointer;
+    display: none; /* Κρυμμένα από προεπιλογή, τα εμφανίζει η Javascript */
+    z-index: 10;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem; /* Διορθώθηκε το κενό */
+    opacity: 0.6;
+    padding-bottom: 5px;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-item.active {
+    opacity: 1;
+    border-bottom: 2px solid white;
+}
+
+/* 4. ΚΕΝΤΡΙΚΟ CONTAINER */
+.container {
+    width: 100%;
+    max-width: 600px; /* Ιδανικό πλάτος για να μη χάνονται οι τιμές στις άκρες */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2.section-title {
+    font-size: 1.8rem;
+    margin: 30px 0 10px 0;
+    font-weight: 500;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin-bottom: 30px;
+}
+
+/* 5. ΛΙΣΤΑ ΠΡΟΪΟΝΤΩΝ & ΤΙΜΕΣ (Εδώ λύθηκε το πρόβλημα!) */
+.product-item {
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 20px;
+}
+
+.product-header {
+    display: flex !important;
+    justify-content: space-between !important; /* Τιμή τέρμα δεξιά */
+    align-items: baseline !important;
+    width: 100% !important;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.product-price {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: var(--gold);
+    white-space: nowrap; /* Απαγορεύει στην τιμή να σπάσει σε δεύτερη γραμμή */
+}
+
+.product-desc {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin: 8px 0 15px 0;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+/* 6. TAGS & FLOATING BUTTON */
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.05) !important; /* Το γκρι φόντο */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Το διακριτικό περίγραμμα */
+    padding: 6px 14px !important; /* Εσωτερική απόσταση */
+    border-radius: 20px !important; /* Στρογγυλεμένες άκρες */
+    font-size: 0.8rem !important; /* Μέγεθος γραμματοσειράς */
+    color: #b9b8b8 !important; /* Λευκό κείμενο */
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Απόσταση εικονιδίου και κειμένου */
+    font-family: 'Cormorant Garamond' serif !important; /* Για να φαίνονται καθαρά τα tags */
+    
+}
+
+.tag-pill {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    color: #a0a0a0;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+}
