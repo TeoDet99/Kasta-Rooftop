@@ -1,6 +1,9 @@
 function lockActiveItem() {
-    const navScroll = document.querySelector('.nav-scroll');
+    const navScroll = document.querySelector('.nav-bar .nav-scroll');
     const activeItem = document.querySelector('.nav-item.active');
+    console.Log(navScroll);
+    console.Log(activeItem);
+    
     
     if (navScroll && activeItem) {
         // Βρίσκουμε την ακριβή απόσταση του επιλεγμένου στοιχείου (π.χ. Food) από την αρχή.
