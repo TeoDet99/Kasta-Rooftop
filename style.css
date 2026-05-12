@@ -545,6 +545,7 @@ h2.section-title {
 /* 6. TAGS & FLOATING BUTTON */
 .tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
 
