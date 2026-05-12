@@ -293,13 +293,13 @@ html {
     font-family: 'Urbanist', sans-serif; /* Η γραμματοσειρά για το "POWERED BY" */
     font-size: 14px;
     color: #888; /* Ένα πιο διακριτικό γκρι */
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .designer-name {
     font-family: 'Monotype Corsiva', serif; /* Η γραμματοσειρά που θες για το όνομά σου */
     font-weight: bold;
-    color: #e7c8a4; /* Το χρυσό του Kasta Rooftop για να ξεχωρίζει */
+    color: #f5ca98; /* Το χρυσό του Kasta Rooftop για να ξεχωρίζει */
     letter-spacing: 1px;
 }
 
