@@ -615,19 +615,9 @@ h2.section-title {
     font-style: normal;
 }
 
-/* Τώρα χρησιμοποίησέ το όπου θες */
-.main-title {
-    font-family: 'Vartigo', serif;
-}
-
 @font-face {
     font-family: 'Monotype Corsiva'; /* Το όνομα που διαλέγεις εσύ */
     src: url('fonts/Monotype-Corsiva-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-
-/* Τώρα χρησιμοποίησέ το όπου θες */
-.main-title {
-    font-family: 'Monotype Corsiva', serif;
 }
