@@ -289,13 +289,20 @@ html {
     opacity: 0.8;
 }
 
-.developer-credit {
-    margin-top: 15px;
-    font-size: 0.7rem;
-    color: white;
-    opacity: 0.5;
-    text-transform: uppercase;
+.powered-by {
+    font-family: 'Urbanist', sans-serif; /* Η γραμματοσειρά για το "POWERED BY" */
+    font-size: 14px;
+    color: #888; /* Ένα πιο διακριτικό γκρι */
+    opacity: 0.8;
 }
+
+.designer-name {
+    font-family: 'Monotype Corsiva', serif; /* Η γραμματοσειρά που θες για το όνομά σου */
+    font-weight: bold;
+    color: #C9A77F; /* Το χρυσό του Kasta Rooftop για να ξεχωρίζει */
+    letter-spacing: 1px;
+}
+
 
 
 
@@ -599,4 +606,28 @@ h2.section-title {
 .back-to-top:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-5px); /* Μικρό ανασήκωμα */
+}
+
+@font-face {
+    font-family: 'Vartigo'; /* Το όνομα που διαλέγεις εσύ */
+    src: url('fonts/Vartigo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Τώρα χρησιμοποίησέ το όπου θες */
+.main-title {
+    font-family: 'Vartigo', serif;
+}
+
+@font-face {
+    font-family: 'Monotype Corsiva'; /* Το όνομα που διαλέγεις εσύ */
+    src: url('fonts/Monotype-Corsiva-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Τώρα χρησιμοποίησέ το όπου θες */
+.main-title {
+    font-family: 'Monotype Corsiva', serif;
 }
