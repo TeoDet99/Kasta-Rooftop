@@ -1,4 +1,8 @@
-    #loader {
+html {
+    scroll-behavior: smooth;
+}
+    
+#loader {
     position: fixed;
     top: 0;
     left: 0;
@@ -132,7 +136,7 @@
 }
 
         /* 2. Info Bar (Ώρα/Γλώσσα) */
-        .info-bar {
+.info-bar {
             display: flex;
             gap: 15px;
             margin-top: 1px;
@@ -146,14 +150,14 @@
             color: #efe0cf;
             align-items: center;
             justify-content: center;
-        }
+}
 
         /* 3. Social Icons */
-        .social-icons {
+.social-icons {
             display: flex;
             gap: 15px;
             margin-top: 25px;
-        }
+}
         .social-circle {
     width: 45px;
     height: 45px;
@@ -589,4 +593,9 @@ h2.section-title {
     color: white;
     text-decoration: none;
     backdrop-filter: blur(5px);
+}
+/* Προαιρετικά: Μια μικρή αλλαγή στο hover για να καταλαβαίνει ο χρήστης ότι πατιέται */
+.back-to-top:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px); /* Μικρό ανασήκωμα */
 }
