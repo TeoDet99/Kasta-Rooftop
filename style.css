@@ -297,10 +297,17 @@ html {
 }
 
 .designer-name {
-    font-family: 'Monotype Corsiva', serif; /* Η γραμματοσειρά που θες για το όνομά σου */
+    font-family: 'Caudex', serif; /* Ή όποια άλλη γραμματοσειρά επέλεξες */
     font-weight: bold;
-    color: #f5ca98; /* Το χρυσό του Kasta Rooftop για να ξεχωρίζει */
+    color: #C9A77F !important; /* Το χρυσό σου χρώμα (το !important κλειδώνει ότι δεν θα αλλάξει) */
+    text-decoration: none; /* Εξαφανίζει την κλασική υπογράμμιση των links */
     letter-spacing: 1px;
+    transition: opacity 0.2s ease;
+}
+
+/* Εφέ όταν ο χρήστης περνάει το ποντίκι από πάνω (Hover) */
+.designer-name:hover {
+    opacity: 0.8; /* Μειώνει ελαφρώς την ένταση, δείχνοντας ότι είναι πατήσιμο */
 }
 
 
