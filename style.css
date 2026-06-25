@@ -61,7 +61,7 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.85); /* Σκούρο φόντο για να εστιάζει ο χρήστης στην αφίσα */
     display: flex;
     justify-content: center;
@@ -81,12 +81,11 @@ html {
 /* Το πλαίσιο της αφίσας */
 .popup-content {
     position: relative;
-    width: 85%; /* Το μικραίνουμε ελάχιστα από 90% για να "αναπνέει" δεξιά-αριστερά */
-    width: a; 
-    max-height: 75dvh; /* ΠΡΟΣΘΗΚΗ: Δεν αφήνει το popup να γίνει πιο ψηλό από το 75% της καθαρής οθόνης */
+    width: 90%;
+    max-width: 400px; /* Ιδανικό πλάτος για αφίσα σε κινητό */
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid rgba(201, 167, 127, 0.4);
+    border: 1px solid rgba(201, 167, 127, 0.4); /* Χρυσό περίγραμμα στυλ Kasta */
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     transform: scale(0.9);
     transition: transform 0.5s ease;
@@ -99,13 +98,8 @@ html {
 /* Η ίδια η εικόνα */
 .popup-banner {
     width: 100%;
-    max-width: 380px; /* Περιορίζει το πλάτος για να μην ξεχειλίζει σε κινητά */
-    max-height: 75dvh; /* Περιορίζει το ύψος για να μην ξεχειλίζει σε κινητά */
-    height: auto; /* Διατηρεί τις αναλογίες */
-    object-fit: contain; /* Καλύπτει το πλαίσιο χωρίς να παραμορφώνεται */
+    height: auto;
     display: block;
-    border-radius: 15px;
-    border: 1px solid rgba(201, 167, 127, 0.4);
 }
 
 /* Το κουμπί "X" για να κλείνει */
