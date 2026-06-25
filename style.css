@@ -53,6 +53,83 @@ html {
     letter-spacing: 4px; /* Αραιά γράμματα για στυλ */
     text-transform: uppercase;
 }
+
+
+/* Το ημιδιάφανο φόντο πίσω από την αφίσα */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* Σκούρο φόντο για να εστιάζει ο χρήστης στην αφίσα */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+/* Κλάση που θα προσθέτει η JS για να εμφανίζεται */
+.popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Το πλαίσιο της αφίσας */
+.popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 400px; /* Ιδανικό πλάτος για αφίσα σε κινητό */
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 167, 127, 0.4); /* Χρυσό περίγραμμα στυλ Kasta */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+.popup-overlay.show .popup-content {
+    transform: scale(1); /* Μικρό εφέ zoom-in όταν σκάει */
+}
+
+/* Η ίδια η εικόνα */
+.popup-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Το κουμπί "X" για να κλείνει */
+.popup-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #c5a47e;
+    color: #ffffff;
+    font-size: 1.8rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    z-index: 10;
+    transition: 0.2s;
+}
+
+.popup-close-btn:hover {
+    background: #c5a47e;
+    color: #161616;
+}
+
+
+
        body {
     position: relative; /* Απαραίτητο για να μπει η εικόνα από πίσω */
     margin: 0;
