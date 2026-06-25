@@ -98,7 +98,7 @@ html {
 /* Η ίδια η εικόνα */
 .popup-banner {
     width: 100%;
-    height: fit-content;
+    height: flex;
     display: block;
 }
 
