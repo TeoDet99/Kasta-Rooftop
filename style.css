@@ -656,6 +656,64 @@ h2.section-title {
     
 }
 
+
+/* --- SIGNATURE SUSHI CARD --- */
+.sushi-signature {
+    grid-column: span 2; /* Αναγκάζει την κάρτα να πιάσει 2 στήλες, γεμίζοντας την οθόνη */
+    aspect-ratio: 2.2 / 1 !important; /* Κομψό ορθογώνιο layout αντί για τετράγωνο */
+    border: 1px solid rgba(241, 227, 200, 0.7) !important; /* Πιο φωτεινό, exclusive χρυσό περίγραμμα */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom overlay για να σκοτεινιάζει πιο ομαλά η φωτογραφία του sushi */
+.sushi-darkener {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(22, 22, 22, 0.85) 0%, rgba(22, 22, 22, 0.2) 100%);
+    z-index: 1;
+}
+
+/* Premium Serif Τυπογραφία για τον τίτλο */
+.sushi-signature h3 {
+    font-family: 'Playfair Display', serif !important; 
+    font-size: 1.7rem !important;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #F1E3C8 !important; /* Κλειδώνει στο soft χρυσό */
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Διακριτικό luxury ταμπελάκι πάνω από τον τίτλο */
+.signature-tag {
+    position: absolute;
+    top: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #F1E3C8;
+    background: rgba(22, 22, 22, 0.7);
+    padding: 5px 14px;
+    border-radius: 50px;
+    border: 1px solid rgba(241, 227, 200, 0.3);
+    z-index: 2;
+}
+
+/* Ομαλό zoom εφέ στο hover/active */
+.sushi-signature:hover img, 
+.sushi-signature:active img {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+
+
+
+
 .tag-pill {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.08);
