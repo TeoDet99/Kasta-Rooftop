@@ -25,7 +25,11 @@ window.addEventListener('load', lockActiveItem);
 window.addEventListener('scroll', () => {
     const headerTop = document.querySelector('.header-top');
     if (headerTop) {
-        headerTop.style.display = window.scrollY > 50 ? "none" : "flex";
+        if (window.scrollY > 50) {
+            headerTop.classList.add('hidden-header');
+        } else {
+            headerTop.classList.remove('hidden-header');
+        }
     }
 });
 
