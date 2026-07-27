@@ -183,6 +183,32 @@ html {
 }
 
 
+/* Container που κρατάει τα λογότυπα */
+.collab-header {
+  display: flex;
+  align-items: center;       /* Κατακόρυφη ευθυγράμμιση στο κέντρο */
+  justify-content: center;   /* Οριζόντια ευθυγράμμιση στο κέντρο */
+  gap: 15px;                 /* Απόσταση ανάμεσα στα στοιχεία */
+  padding: 10px 0;
+}
+
+/* Στυλ για τις εικόνες των logos */
+.brand-logo {
+  height: 40px;              /* Ρύθμισε το ύψος όπως σε εξυπηρετεί */
+  width: auto;               /* Διατηρεί τις αναλογίες της εικόνας */
+  object-fit: contain;
+}
+
+/* Στυλ για το σύμβολο X */
+.collab-x {
+  color: #c5a47e;            /* Χρυσό/χάλκινο χρώμα (ταιριάζει με το στυλ του Kasta) */
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  user-select: none;         /* Εμποδίζει την τυχαία επιλογή του text */
+}
+
+
 .welcome-section {
     text-align: center;
     padding: 40px 20px 10px 20px;
